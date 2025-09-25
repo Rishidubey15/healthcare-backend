@@ -10,12 +10,12 @@ const {
 } = require('../controllers/doctorController');
 
 router.route('/')
-    .post(protect, addDoctor) // Private
-    .get(getDoctors); // Public
+    .post(protect, addDoctor) 
+    .get(getDoctors); 
 
 router.route('/:id')
-    .get(getDoctorById) // Public
-    .put(protect, updateDoctor) // Private
-    .delete(protect, deleteDoctor); // Private
+    .get(getDoctorById)
+    .put(protect, updateDoctor) 
+    .delete(protect, deleteDoctor); 
 
 module.exports = router;
